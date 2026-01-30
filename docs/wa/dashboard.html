@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workstream A — Dashboard</title>
     <style>
-        .site-nav { margin-bottom: 1rem; padding: 0.75rem 1rem; background: #e8f5e9; border-radius: 6px; font-size: 14px; border: 1px solid #c8e6c9; }
-        .site-nav a { color: #1B5E20; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 24px; color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: 240px; min-width: 240px; background: #f4f5f7; border-right: 1px solid #dfe1e6; padding: 16px 0; flex-shrink: 0; }
+        .sidebar-title { font-size: 14px; font-weight: 600; color: #172b4d; padding: 8px 16px; margin-bottom: 8px; border-bottom: 1px solid #dfe1e6; }
+        .sidebar-section { font-size: 12px; font-weight: 600; color: #5e6c84; padding: 12px 16px 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .sidebar-nav a { display: block; font-size: 14px; color: #172b4d; text-decoration: none; padding: 6px 16px 6px 24px; border-left: 3px solid transparent; }
+        .sidebar-nav a:hover { background: #ebecf0; color: #0052cc; }
+        .sidebar-nav a.current { font-weight: 600; background: #e8f5e9; color: #1B5E20; border-left-color: #2E7D32; }
+        .content { flex: 1; padding: 24px 32px; overflow: auto; }
         h1 { font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1a1a1a; }
         .subtitle { color: #666; margin-bottom: 24px; font-size: 14px; }
         .board { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 1400px; margin: 0 auto; }
@@ -80,11 +86,22 @@
     </style>
 </head>
 <body>
-  <nav class="site-nav">
-    <a href="../">Home</a> |
-    Workstream A: <a href="capability-map.html">Capability Map</a> | <a href="calendar.html">Calendar</a> | <a href="dashboard.html">Dashboard</a> |
-    Workstream B: <a href="../wb/capability-map.html">Capability Map</a> | <a href="../wb/calendar.html">Calendar</a> | <a href="../wb/dashboard.html">Dashboard</a>
-  </nav>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">DMSi Sample Dashboard</div>
+      <nav class="sidebar-nav">
+        <a href="../">Home</a>
+        <div class="sidebar-section">Workstream A</div>
+        <a href="capability-map.html">Capability Map</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="dashboard.html" class="current">Dashboard</a>
+        <div class="sidebar-section">Workstream B</div>
+        <a href="../wb/capability-map.html">Capability Map</a>
+        <a href="../wb/calendar.html">Calendar</a>
+        <a href="../wb/dashboard.html">Dashboard</a>
+      </nav>
+    </aside>
+    <main class="content">
     <h1>Workstream A — Dashboard</h1>
     <p class="subtitle">Program Hub / Miro Board Structure (DMSi Transformation Program)</p>
     <div class="board">
@@ -213,5 +230,7 @@
             <div class="legend-item"><div class="color-swatch" style="background: #e74c3c;"></div><span>WS-E: Market</span></div>
         </div>
     </div>
+    </main>
+  </div>
 </body>
 </html>
