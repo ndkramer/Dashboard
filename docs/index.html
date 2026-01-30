@@ -3,58 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Workstream A — Capability Map</title>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <title>DMSi Sample Dashboard</title>
   <style>
-    body { margin: 20px; background: #fafafa; font-family: sans-serif; }
+    body { margin: 20px; background: #fafafa; font-family: sans-serif; max-width: 900px; }
+    .site-nav { margin-bottom: 1.5rem; padding: 0.75rem 1rem; background: #e8f5e9; border-radius: 6px; font-size: 14px; border: 1px solid #c8e6c9; }
+    .site-nav a { color: #1B5E20; }
     h1 { color: #1B5E20; font-size: 1.5rem; }
-    .mermaid { display: flex; justify-content: center; margin-top: 1rem; }
+    .intro { color: #333; margin: 1rem 0; }
+    ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+    li { margin: 0.25rem 0; }
+    a { color: #2E7D32; }
   </style>
 </head>
 <body>
-  <h1>Workstream A — Capability Map</h1>
-  <p>Capabilities at top of each column; linked EPICs below (WSA project).</p>
-  <div class="mermaid">%%{init: {'theme': 'base', 'themeVariables': {
-  'primaryColor': '#E8F5E9',
-  'primaryBorderColor': '#2E7D32',
-  'primaryTextColor': '#1B5E20',
-  'lineColor': '#1B5E20',
-  'secondaryColor': '#C8E6C9',
-  'tertiaryColor': '#A5D6A7'
-}}}%%
-%% Workstream A Capability Map - WSA project ONLY (no other Jira projects)
-%% flowchart TD arranges subgraphs left-to-right = 5 columns; inside each: Capability TOP, EPICs BELOW
-flowchart TD
-  subgraph col1["Work Management"]
-    direction TB
-    C1["Work Management"]
-    C1 --&gt; E12["WSA-12"] --&gt; E13["WSA-13"] --&gt; E14["WSA-14"] --&gt; E15["WSA-15"] --&gt; E16["WSA-16"] --&gt; E17["WSA-17"] --&gt; E21["WSA-21"]
-  end
-
-  subgraph col2["Visibility Infrastructure"]
-    direction TB
-    C2["Visibility Infrastructure"]
-    C2 --&gt; E2_1["WSA-1"] --&gt; E2_2["WSA-2"] --&gt; E2_8["WSA-8"] --&gt; E2_9["WSA-9"] --&gt; E2_10["WSA-10"] --&gt; E2_11["WSA-11"] --&gt; E2_25["WSA-25"] --&gt; E2_26["WSA-26"] --&gt; E2_27["WSA-27"] --&gt; E2_41["WSA-41"] --&gt; E2_42["WSA-42"] --&gt; E2_43["WSA-43"]
-  end
-
-  subgraph col3["Proactive Detection"]
-    direction TB
-    C3["Proactive Detection"]
-    C3 --&gt; E3_22["WSA-22"] --&gt; E3_23["WSA-23"] --&gt; E3_24["WSA-24"]
-  end
-
-  subgraph col4["Pipeline Automation"]
-    direction TB
-    C4["Pipeline Automation"]
-    C4 --&gt; E4_28["WSA-28"] --&gt; E4_29["WSA-29"] --&gt; E4_30["WSA-30"] --&gt; E4_31["WSA-31"] --&gt; E4_32["WSA-32"] --&gt; E4_33["WSA-33"] --&gt; E4_34["WSA-34"] --&gt; E4_35["WSA-35"]
-  end
-
-  subgraph col5["Learning Systems"]
-    direction TB
-    C5["Learning Systems"]
-    C5 --&gt; E5_36["WSA-36"] --&gt; E5_37["WSA-37"] --&gt; E5_38["WSA-38"] --&gt; E5_39["WSA-39"] --&gt; E5_40["WSA-40"]
-  end
-</div>
-  <script>mermaid.initialize({ startOnLoad: true, theme: 'base' });</script>
+  <nav class="site-nav">
+    <strong>Home</strong> |
+    Workstream A: <a href="wa/capability-map.html">Capability Map</a> | <a href="wa/calendar.html">Calendar</a> | <a href="wa/dashboard.html">Dashboard</a> |
+    Workstream B: <a href="wb/capability-map.html">Capability Map</a> | <a href="wb/calendar.html">Calendar</a> | <a href="wb/dashboard.html">Dashboard</a>
+  </nav>
+  <h1>DMSi Sample Dashboard</h1>
+  <p class="intro">Confluence-style structure for Workstream A and Workstream B. Each workstream has:</p>
+  <ul>
+    <li><strong>Capability Map</strong> — capabilities and linked EPICs (Workstream A has the map; Workstream B coming soon)</li>
+    <li><strong>Calendar</strong> — governance / meeting calendar (from Governance Calendar)</li>
+    <li><strong>Dashboard</strong> — program hub / Miro board sketch (timeline, dependencies, workstream status)</li>
+  </ul>
+  <p class="intro">Choose a workstream and page above to view.</p>
 </body>
 </html>
